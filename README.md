@@ -1,3 +1,43 @@
+# Thinkific OAuth React CRA Starter
+
+This is a boilerplate to setup a React CRA application to request access token from a Thinkific Site.
+
+## Prerequisites
+
+You will need the credentials for your app created in Thinkific Platform.
+
+- client_id: App's client id;
+- redirect_uri: App's registered callback uri. For this project will be your app's url + `/callback`. i.e `your-domain.com/thinkific/callback`
+
+## Description
+
+This starte kit gives you a CRA React app with React Router and Chakra UI that adds two screens:
+1. `http://localhost:3000/thinkific/authorize`
+2. `http://localhost:3000/thinkfiic/callback`
+
+These two routes comes with the UI and logic to 
+1. Take the Thinkific site domain from the user via `/thinkific/authorize` route
+2. Authorize the Thinkific site
+3. Handle the redirect via `/thinkific/callback` route
+4. Generate access token and expiry date and then store it in localstorage with the name `thinkificAccessToken` and `thinkificAccessTokenExpiresAt`
+
+## Project setup
+
+Modify `.env.development` file as well as `.env.production` file with appropriate values
+
+```
+REACT_APP_THINKIFIC_CLIENT_ID=xxxxx
+REACT_APP_THINKIFIC_CALLBACK_URL_HOST=https://yoursiterunningtheapp.com
+```
+
+Install dependencies:
+```
+npm install
+```
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
